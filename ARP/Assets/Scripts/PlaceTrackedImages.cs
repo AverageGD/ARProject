@@ -55,6 +55,7 @@ public class PlaceTrackedImages : MonoBehaviour
                     // Instantiate the prefab, parenting it to the ARTrackedImage
                     var newPrefab = Instantiate(curPrefab, trackedImage.transform);
                     // Add the created prefab to our array
+                    MoleculeManager.instance.AddMolecule(newPrefab);
                     _instantiatedPrefabs[imageName] = newPrefab;
                 }
             }
@@ -74,7 +75,10 @@ public class PlaceTrackedImages : MonoBehaviour
             // Destroy its prefab
             Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
             // Also remove the instance from our array
+            MoleculeManager.instance.DeleteMolecule(_instantiatedPrefabs[trackedImage.referenceImage.name].GetComponent<Molecule>().id);
+
             _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
+
             // Or, simply set the prefab instance to inactive
             //_instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(false);
         }

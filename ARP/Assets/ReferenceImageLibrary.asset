@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
   m_Name: ReferenceImageLibrary
   m_EditorClassIdentifier: 
-  m_GuidLow: 0
-  m_GuidHigh: 0
+  m_GuidLow: 5220198571635938805
+  m_GuidHigh: 576270979446087091
   m_DataStore:
     m_Storage: []
   m_Images:
@@ -21,9 +21,39 @@ MonoBehaviour:
       m_GuidLow: 5169555984218602043
       m_GuidHigh: 18332815025373592198
     m_SerializedTextureGuid:
-      m_GuidLow: 3815697214106106438
-      m_GuidHigh: 1203630511097273450
-    m_Size: {x: 0.06, y: 0.089999996}
+      m_GuidLow: 2843068074429282482
+      m_GuidHigh: 10350098683594442488
+    m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
-    m_Name: King
+    m_Name: Hydrogen
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5360970919812204667
+      m_GuidHigh: 4987201196453014699
+    m_SerializedTextureGuid:
+      m_GuidLow: 12255680480810143597
+      m_GuidHigh: 12188104757524309627
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Fluorine
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4784297964297144266
+      m_GuidHigh: 14079220296612447360
+    m_SerializedTextureGuid:
+      m_GuidLow: 10742373570401035477
+      m_GuidHigh: 17476080702180175114
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Aluminum
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4787543520409360824
+      m_GuidHigh: 4352938679589076382
+    m_SerializedTextureGuid:
+      m_GuidLow: 1667478046850966021
+      m_GuidHigh: 9739667963588707755
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Oxygen
     m_Texture: {fileID: 0}
