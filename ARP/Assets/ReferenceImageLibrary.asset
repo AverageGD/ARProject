@@ -21,11 +21,11 @@ MonoBehaviour:
       m_GuidLow: 5169555984218602043
       m_GuidHigh: 18332815025373592198
     m_SerializedTextureGuid:
-      m_GuidLow: 2843068074429282482
-      m_GuidHigh: 10350098683594442488
+      m_GuidLow: 1667478046850966021
+      m_GuidHigh: 9739667963588707755
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
-    m_Name: Hydrogen
+    m_Name: Oxygen
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
       m_GuidLow: 5360970919812204667
@@ -51,9 +51,19 @@ MonoBehaviour:
       m_GuidLow: 4787543520409360824
       m_GuidHigh: 4352938679589076382
     m_SerializedTextureGuid:
-      m_GuidLow: 1667478046850966021
-      m_GuidHigh: 9739667963588707755
+      m_GuidLow: 2843068074429282482
+      m_GuidHigh: 10350098683594442488
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
-    m_Name: Oxygen
+    m_Name: Hydrogen1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4820763990552668865
+      m_GuidHigh: 3037751054217889434
+    m_SerializedTextureGuid:
+      m_GuidLow: 1077551121312152821
+      m_GuidHigh: 15727668015268813305
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Hydrogen2
     m_Texture: {fileID: 0}

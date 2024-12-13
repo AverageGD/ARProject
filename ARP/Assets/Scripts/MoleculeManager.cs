@@ -1,11 +1,12 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class MoleculeManager : MonoBehaviour
 {
-    public GameObject x;
+    public Text debugText;
 
     // Singleton instance for easy access from other classes
     public static MoleculeManager instance;
@@ -15,6 +16,7 @@ public class MoleculeManager : MonoBehaviour
 
     // List of molecules currently present in the scene (GameObjects)
     [SerializeField] private List<GameObject> _molecules;
+
 
     private void Awake()
     {
@@ -52,23 +54,32 @@ public class MoleculeManager : MonoBehaviour
         foreach (Reaction reaction in reactions)
         {
             string currMolecules = ""; // Holds the IDs of all molecules in the scene as a concatenated string
-
+            debugText.text = "";
             // Loop through all molecules in the scene and concatenate their IDs to the currMolecules string
             foreach (GameObject molecule in _molecules)
             {
-                currMolecules += Convert.ToChar(molecule.GetComponent<Molecule>().id);
+                currMolecules += (char)(molecule.GetComponent<Molecule>().id + '0');
+                debugText.text += (char)(molecule.GetComponent<Molecule>().id + '0');
             }
 
+
             // Normalize the current molecule string by sorting its characters (to ensure order-independent comparison)
+
+
             currMolecules = new string(currMolecules.OrderBy(c => c).ToArray());
 
+
             // Check if the current set of molecules matches any reaction
-            if (reaction.ReactionElements.Contains(currMolecules))
+            if (currMolecules.Contains(reaction.ReactionElements))
             {
-                ReactionInvoker();
+                Vector3 position = _molecules[0].transform.position;
+                string positionText = $"X: {position.x:F2}, Y: {position.y:F2}, Z: {position.z:F2}";
+
+                // Выводим в текстовый элемент
+                debugText.text = positionText;
+
                 // If a reaction matches, invoke the corresponding reaction logic here
-                Debug.Log("Reaction triggered!");
-                Debug.Log("Reaction Name: " + reaction.ReactionName);
+                ReactionManager.instance.StartReaction(reaction.Id, _molecules[0].transform.position);
                 break; // Exit the loop once a matching reaction is found
             }
         }
@@ -88,13 +99,39 @@ public class MoleculeManager : MonoBehaviour
                 break; // Exit the loop once the molecule is removed
             }
         }
+
+
+        foreach (Reaction reaction in reactions)
+        {
+
+            string currMolecules = ""; // Holds the IDs of all molecules in the scene as a concatenated string
+            // Loop through all molecules in the scene and concatenate their IDs to the currMolecules string
+            foreach (GameObject molecule in _molecules)
+            {
+                currMolecules += (char)(molecule.GetComponent<Molecule>().id + '0');
+            }
+
+
+            // Normalize the current molecule string by sorting its characters (to ensure order-independent comparison)
+
+
+            currMolecules = new string(currMolecules.OrderBy(c => c).ToArray());
+
+
+            // Check if the current set of molecules matches any reaction
+            if (currMolecules.Contains(reaction.ReactionElements))
+            {
+                return;
+            }
+        }
+
+        ReactionManager.instance.StopReactions();
+
     }
 
-    private void ReactionInvoker()
-    {
-        x.SetActive(true);
-    }
 }
+
+
 
 // Structure to represent a chemical reaction
 
@@ -104,10 +141,13 @@ public struct Reaction
     // Private fields to store the reaction name and the reaction elements
     [SerializeField] private string _reactionName;
     [SerializeField] private string _reactionElements;
+    [SerializeField] private short _id;
 
     // Property to get the reaction name
     public string ReactionName { get { return _reactionName; } }
 
     // Property to get and set the reaction elements (a string that represents the molecules involved in the reaction)
     public string ReactionElements { get { return _reactionElements; } set { _reactionElements = value; } }
+
+    public short Id { get { return _id; } }
 }
