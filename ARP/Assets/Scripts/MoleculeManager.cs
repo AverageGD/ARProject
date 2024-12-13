@@ -52,12 +52,17 @@ public class MoleculeManager : MonoBehaviour
         foreach (Reaction reaction in reactions)
         {
             string currMolecules = ""; // Holds the IDs of all molecules in the scene as a concatenated string
+
+            Vector3 position = Vector3.zero;
+
             // Loop through all molecules in the scene and concatenate their IDs to the currMolecules string
             foreach (GameObject molecule in _molecules)
             {
                 currMolecules += (char)(molecule.GetComponent<Molecule>().id + '0');
+                position += molecule.transform.position;
             }
 
+            position /= _molecules.Count;
 
             // Normalize the current molecule string by sorting its characters (to ensure order-independent comparison)
 
@@ -68,11 +73,9 @@ public class MoleculeManager : MonoBehaviour
             // Check if the current set of molecules matches any reaction
             if (currMolecules.Contains(reaction.ReactionElements))
             {
-                Vector3 position = _molecules[0].transform.position;
-                string positionText = $"X: {position.x:F2}, Y: {position.y:F2}, Z: {position.z:F2}";
-
+                
                 // If a reaction matches, invoke the corresponding reaction logic here
-                ReactionManager.instance.StartReaction(reaction.Id, _molecules[0].transform.position);
+                ReactionManager.instance.StartReaction(reaction.Id, position);
                 break; // Exit the loop once a matching reaction is found
             }
         }

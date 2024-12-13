@@ -475,8 +475,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3583619555576856804}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.746, y: 0.5, z: 0.813}
+  m_LocalRotation: {x: -0.6445356, y: -0.29081583, z: -0.29081583, w: 0.6445356}
+  m_LocalPosition: {x: -0.756, y: 0.5, z: 0.222}
   m_LocalScale: {x: 0.5, y: 0.01, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -484,7 +484,7 @@ Transform:
   - {fileID: 2102184750908522590}
   m_Father: {fileID: 4365528357719543085}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -48.57, z: 0}
 --- !u!114 &7027700216025616306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Image: {fileID: 2800000, guid: b89c78b29b592774f886e261eaefa28f, type: 3}
-  m_ImagePhysicalSizeMeters: {x: 0.05, y: 0.05}
+  m_ImagePhysicalSizeMeters: {x: 1, y: 1}
 --- !u!1 &3699847275743918454
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,8 +523,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3699847275743918454}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.602, y: 0.5, z: 0.813}
+  m_LocalRotation: {x: -0.447868, y: 0.54718757, z: 0.54718757, w: 0.447868}
+  m_LocalPosition: {x: 0.76, y: 0.5, z: -0.245}
   m_LocalScale: {x: 0.5, y: 0.01, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -532,7 +532,7 @@ Transform:
   - {fileID: 6562119189924279428}
   m_Father: {fileID: 4365528357719543085}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 101.4, z: 0}
 --- !u!114 &3263718784309211175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Image: {fileID: 2800000, guid: ed50620512721724ab05f5ef68402a87, type: 3}
-  m_ImagePhysicalSizeMeters: {x: 0.05, y: 0.05}
+  m_ImagePhysicalSizeMeters: {x: 1, y: 1}
 --- !u!1 &5032183317716042808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,4 +1169,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Image: {fileID: 2800000, guid: 25227cf53b090ef4f9d95e2bbbe643da, type: 3}
-  m_ImagePhysicalSizeMeters: {x: 0.05, y: 0.05}
+  m_ImagePhysicalSizeMeters: {x: 1, y: 1}
