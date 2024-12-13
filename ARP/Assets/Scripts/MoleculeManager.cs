@@ -6,8 +6,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class MoleculeManager : MonoBehaviour
 {
-    public Text debugText;
-
     // Singleton instance for easy access from other classes
     public static MoleculeManager instance;
 
@@ -54,12 +52,10 @@ public class MoleculeManager : MonoBehaviour
         foreach (Reaction reaction in reactions)
         {
             string currMolecules = ""; // Holds the IDs of all molecules in the scene as a concatenated string
-            debugText.text = "";
             // Loop through all molecules in the scene and concatenate their IDs to the currMolecules string
             foreach (GameObject molecule in _molecules)
             {
                 currMolecules += (char)(molecule.GetComponent<Molecule>().id + '0');
-                debugText.text += (char)(molecule.GetComponent<Molecule>().id + '0');
             }
 
 
@@ -74,9 +70,6 @@ public class MoleculeManager : MonoBehaviour
             {
                 Vector3 position = _molecules[0].transform.position;
                 string positionText = $"X: {position.x:F2}, Y: {position.y:F2}, Z: {position.z:F2}";
-
-                // Выводим в текстовый элемент
-                debugText.text = positionText;
 
                 // If a reaction matches, invoke the corresponding reaction logic here
                 ReactionManager.instance.StartReaction(reaction.Id, _molecules[0].transform.position);

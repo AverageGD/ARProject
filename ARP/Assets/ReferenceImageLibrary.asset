@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
     m_Name: Oxygen
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: ed50620512721724ab05f5ef68402a87, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5360970919812204667
       m_GuidHigh: 4987201196453014699
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
     m_Name: Fluorine
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: c3608f6dec76aa147b267c9db3d824a9, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4784297964297144266
       m_GuidHigh: 14079220296612447360
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
     m_Name: Aluminum
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: c44c64d593d895140a2d826fce8287f2, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4787543520409360824
       m_GuidHigh: 4352938679589076382
@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
     m_Name: Hydrogen1
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: b89c78b29b592774f886e261eaefa28f, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4820763990552668865
       m_GuidHigh: 3037751054217889434
@@ -66,4 +66,4 @@ MonoBehaviour:
     m_Size: {x: 0.05, y: 0.05}
     m_SpecifySize: 1
     m_Name: Hydrogen2
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 25227cf53b090ef4f9d95e2bbbe643da, type: 3}

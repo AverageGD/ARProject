@@ -65,7 +65,6 @@ public class PlaceTrackedImages : MonoBehaviour
         // on whether their corresponding image is currently being tracked
         foreach (var trackedImage in eventArgs.updated)
         {
-            Debug.Log(trackedImage.referenceImage);
             _instantiatedPrefabs[trackedImage.referenceImage.name]
                 .SetActive(trackedImage.trackingState == TrackingState.Tracking);
         }
