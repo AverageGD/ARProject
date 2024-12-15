@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  electronCount: 4
+  _torus: {fileID: 7250795026407169086, guid: 52438ff80703ed0438b3ec5743d00dc4, type: 3}
 --- !u!1 &3157544996105083114
 GameObject:
   m_ObjectHideFlags: 0

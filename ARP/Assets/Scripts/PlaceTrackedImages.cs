@@ -67,6 +67,10 @@ public class PlaceTrackedImages : MonoBehaviour
         {
             _instantiatedPrefabs[trackedImage.referenceImage.name]
                 .SetActive(trackedImage.trackingState == TrackingState.Tracking);
+
+            if (trackedImage.trackingState == TrackingState.Tracking)
+                MoleculeManager.instance.AddMolecule(_instantiatedPrefabs[trackedImage.referenceImage.name]);
+            
         }
 
         // If the AR subsystem has given up looking for a tracked image

@@ -67,3 +67,33 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Hydrogen2
     m_Texture: {fileID: 2800000, guid: 25227cf53b090ef4f9d95e2bbbe643da, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5752922018930767738
+      m_GuidHigh: 7184191566403728572
+    m_SerializedTextureGuid:
+      m_GuidLow: 17646374249240756131
+      m_GuidHigh: 1595713128117630027
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Nitrogen
+    m_Texture: {fileID: 2800000, guid: 9b987fa383e2f4e44bf4e0b4a21c2516, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5485252560684290029
+      m_GuidHigh: 4107052087370438044
+    m_SerializedTextureGuid:
+      m_GuidLow: 14349640294578057821
+      m_GuidHigh: 15077062456243678760
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Carbon
+    m_Texture: {fileID: 2800000, guid: fcf4f25d29d1c724286ec8186c7c3cd1, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5453325672568738309
+      m_GuidHigh: 3295364137983634820
+    m_SerializedTextureGuid:
+      m_GuidLow: 16470996438219060567
+      m_GuidHigh: 10306398939039530459
+    m_Size: {x: 0.05, y: 0.05}
+    m_SpecifySize: 1
+    m_Name: Phosphorus
+    m_Texture: {fileID: 2800000, guid: 54c57557bbfee494dbfde9ba3aaf078f, type: 3}

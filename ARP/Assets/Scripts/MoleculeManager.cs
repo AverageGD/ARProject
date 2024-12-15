@@ -13,7 +13,7 @@ public class MoleculeManager : MonoBehaviour
     public List<Reaction> reactions;
 
     // List of molecules currently present in the scene (GameObjects)
-    [SerializeField] private List<GameObject> _molecules;
+    public List<GameObject> _molecules;
 
 
     private void Awake()
@@ -45,6 +45,8 @@ public class MoleculeManager : MonoBehaviour
     // Method to add a molecule to the list of molecules
     public void AddMolecule(GameObject m)
     {
+        if (_molecules.Contains(m))
+            return;
         // Add the molecule to the list
         _molecules.Add(m);
 
@@ -73,9 +75,9 @@ public class MoleculeManager : MonoBehaviour
             // Check if the current set of molecules matches any reaction
             if (currMolecules.Contains(reaction.ReactionElements))
             {
-                
+                Debug.Log(reaction.Id);
                 // If a reaction matches, invoke the corresponding reaction logic here
-                ReactionManager.instance.StartReaction(reaction.Id, position);
+                ReactionManager.instance.StartReaction(reaction.Id, position, reaction.ReactionName);
                 break; // Exit the loop once a matching reaction is found
             }
         }
@@ -96,33 +98,14 @@ public class MoleculeManager : MonoBehaviour
             }
         }
 
-
-        foreach (Reaction reaction in reactions)
-        {
-
-            string currMolecules = ""; // Holds the IDs of all molecules in the scene as a concatenated string
-            // Loop through all molecules in the scene and concatenate their IDs to the currMolecules string
-            foreach (GameObject molecule in _molecules)
-            {
-                currMolecules += (char)(molecule.GetComponent<Molecule>().id + '0');
-            }
-
-
-            // Normalize the current molecule string by sorting its characters (to ensure order-independent comparison)
-
-
-            currMolecules = new string(currMolecules.OrderBy(c => c).ToArray());
-
-
-            // Check if the current set of molecules matches any reaction
-            if (currMolecules.Contains(reaction.ReactionElements))
-            {
-                return;
-            }
-        }
-
         ReactionManager.instance.StopReactions();
 
+    }
+
+    public void DeleteAllMolecules()
+    {
+        _molecules.Clear();
+        _molecules = new List<GameObject>();
     }
 
 }
